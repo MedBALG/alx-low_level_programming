@@ -17,7 +17,7 @@ buffer = malloc(sizeof(char) * 1024);
 if (buffer == NULL)
 {
 dprintf(STDERR_FILENO,
-"Error: Cant write to %sn, file);
+"Error: Can it write to %s\n", file);
 exit(99);
 }
 return (buffer);
@@ -32,7 +32,7 @@ int c;
 c = close(fd);
 if (c == -1)
 {
-dprintf(STDERR_FILENO, Error: Cant close fd %d\n", fd);
+dprintf(STDERR_FILENO, "Error: Can it close fd %d\n", fd);
 exit(100);
 }
 }
@@ -65,7 +65,7 @@ do {
 if (from == -1 || r == -1)
 {
 dprintf(STDERR_FILENO,
-"Error: Cant read from file %sn, argv[1]);
+"Error: Can it read from file %s\n", argv[1]);
 free(buffer);
 exit(98);
 }
@@ -73,7 +73,7 @@ w = write(to, buffer, r);
 if (to == -1 || w == -1)
 {
 dprintf(STDERR_FILENO,
-Error: Cant write to %s\n", argv[2]);
+"Error: Can it write to %s\n", argv[2]);
 free(buffer);
 exit(99);
 }
