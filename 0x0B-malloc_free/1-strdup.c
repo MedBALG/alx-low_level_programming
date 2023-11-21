@@ -4,11 +4,11 @@
 /**
  * _strdup - duplicate to new memory space location
  * @str: char
- * Return: null
+ * Return: 0
  */
 char *_strdup(char *str)
 {
-	char *aze;
+	char *aaa;
 	int i, r = 0;
 
 	if (str == NULL)
@@ -17,13 +17,13 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 
-	aze = malloc(sizeof(char) * (i + 1));
+	aaa = malloc(sizeof(char) * (i + 1));
 
-	if (azez == NULL)
+	if (aaa == NULL)
 		return (NULL);
 
 	for (r = 0; str[r]; r++)
-		aze[r] = str[r];
+		aaa[r] = str[r];
 
-	return (aze);
+	return (aaa);
 }
